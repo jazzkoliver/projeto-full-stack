@@ -1,0 +1,12 @@
+.formulario {
+    padding: 15px;
+    background-color:lightgray;
+    border: 5px outset lightgray;
+    border-radius: 5px;
+}
+
+.titulo {
+    color:#16894e;
+    text-align: center;
+    padding: 30px;
+}

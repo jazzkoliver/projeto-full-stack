@@ -1,40 +1,22 @@
-import React, { useState } from 'react';
-import { ThemeProvider, createMuiTheme, makeStyles } from '@material-ui/core';
+import React from 'react';
+import Forms from './pages/formu';
+import {Container,Row,Col} from 'react-bootstrap';
+import './css/style.css';
+import './App.css';
+import axios from 'axios';
 
-import Home from './Home';
-
-const useStyles = makeStyles({
-  root: {},
-});
-
-function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const theme = createMuiTheme({
-    spacing: 4,
-    palette: {
-      type: darkMode ? 'dark' : 'light',
-      primary: {
-        main: '#f44336',
-      },
-      secondary: {
-        main: '#3EA6FF',
-      },
-      background: {
-        default: darkMode ? '#232323' : '#FFF',
-        dark: darkMode ? '#181818' : '#f4f6f8',
-        paper: darkMode ? '#232323' : '#FFF',
-      },
-    },
-  });
-
-  const classes = useStyles();
-
+export default function App() {
+  
   return (
-    <ThemeProvider theme={theme}>
-      <Home darkMode={darkMode} setDarkMode={setDarkMode} />
-    </ThemeProvider>
+    <div className="App d-flex align-items-center">
+      <Container className="formulario">
+        <Row>
+          <Col>
+            <h1 className="titulo">Cadastro de Currículo JobsNET</h1>
+            <Forms></Forms>
+          </Col>
+        </Row>
+      </Container>      
+    </div>
   );
 }
-
-export default App;
