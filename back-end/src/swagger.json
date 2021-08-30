@@ -1,0 +1,86 @@
+{
+  "openapi": "3.0.0",
+
+  "info": {
+    "title": "API Banco de Currículos",
+    "description": "Essa é a API do Desafio GAMA Banco de Currículos",
+    "version": "0.0.1"
+  },
+
+  "servers": [
+    {
+      "url": "http://localhost:5000",
+      "description": "Ambiente de desenvolvimento"
+    }
+  ],
+
+  "paths": {
+    "/register": {
+      "post": {
+        "summary": "Cadastro de candidato",
+        "description": "Rota de cadastro de usuário recebe: cpf, name, data de nascimento, cep, rua, número, bairro, cidade, email, profissão e celular",
+        "tags": ["Candidatos"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "cpf": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "dtnasc": {
+                    "type": "string"
+                  },
+                  "cep": {
+                    "type": "string"
+                  },
+                  "rua": {
+                    "type": "string"
+                  },
+                  "numero": {
+                    "type": "string"
+                  },
+                  "bairro": {
+                    "type": "string"
+                  },
+                  "cidade": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "profissao": {
+                    "type": "string"
+                  },
+                  "celular": {
+                    "type": "string"
+                  }
+                }
+              },
+              "examples": {
+                "Eu": {
+                  "value": {
+                    "cpf": "000.000.000-00",
+                    "name": "Jessica Bruna de Oliveira",
+                    "dtnasc": "20/08/1993",
+                    "cep": "00000-000",
+                    "rua": "Rua dos Bobos",
+                    "numero": "0",
+                    "bairro": "Liberdade",
+                    "cidade": "Curitiba",
+                    "email": "jazzkoliver@gmail.com",
+                    "profissao": "Desenvolvedora Full Stack",
+                    "celular": "(00) 00000-0000"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
